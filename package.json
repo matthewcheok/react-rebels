@@ -1,6 +1,6 @@
 {
   "name": "rebels",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Flux simplified",
   "main": "lib/index.js",
   "scripts": {

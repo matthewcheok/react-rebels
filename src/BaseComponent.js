@@ -26,7 +26,7 @@ export default class BaseComponent extends Component {
 
   componentDidMount() {
     // initial update
-    this._onChange();
+    this._onChange(null);
   }
 
   componentWillUnmount() {
@@ -35,8 +35,12 @@ export default class BaseComponent extends Component {
     }
   }
 
-  _onChange() {
+  _onChange(target) {
     for (let [store, callback] of this._updates.entries()) {
+      if (target && target !== store) {
+        continue;
+      }
+
       let update = callback.call(this, store);
       if (update) {
         update();
