@@ -19,7 +19,7 @@ export default class BaseComponent extends Component {
   }
 
   // Store -> Component
-  updateFromStore(store, callback) {
+  updateForStore(store, callback) {
     this._updates.set(store, callback);
     store.addChangeListener(this._onChange.bind(this));
   }

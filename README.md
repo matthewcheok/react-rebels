@@ -53,7 +53,7 @@ export default class TheButton extends Component {
             count: 0
         };
 
-        this.updateFromStore(store, () => {
+        this.updateForStore(store, () => {
             this.setState({
                 count: store.count
             });
