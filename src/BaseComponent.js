@@ -39,7 +39,7 @@ export default class BaseComponent extends Component {
     for (let [store, callback] of this._updates.entries()) {
       let update = callback.call(this, store);
       if (update) {
-        this.setState(update);
+        update();
       }
     }
   }
