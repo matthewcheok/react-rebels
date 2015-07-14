@@ -12,10 +12,10 @@ export default class BaseComponent extends Component {
 
   // Component -> Action
   dispatchAction(type, payload) {
-		Dispatcher.dispatch({
-			type: type,
-			payload: payload
-		});
+    Dispatcher.dispatch({
+      type: type,
+      payload: payload
+    });
   }
 
   // Store -> Component
@@ -24,9 +24,9 @@ export default class BaseComponent extends Component {
     store.addChangeListener(this._onChange.bind(this));
   }
 
-  componentWillMount() {
-  	// initial update
-  	this._onChange();
+  componentDidMount() {
+    // initial update
+    this._onChange();
   }
 
   componentWillUnmount() {
