@@ -23,10 +23,5 @@
   "peerDependencies": {
     "react": "^0.13.3",
     "flux": "^2.0.3"
-  },
-  "devDependencies": {
-    "babel-core": "^5.6.20",
-    "babel-loader": "^5.3.1",
-    "webpack": "^1.10.1"
   }
 }
